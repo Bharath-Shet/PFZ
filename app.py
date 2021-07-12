@@ -31,7 +31,7 @@ def home():
         else:
             result = 'NPFZ'
         
-        return render_template('result.html', prediction_text='The predicted output is {}'.format(result))
+        return render_template('Result.html', prediction_text='The predicted output is {}'.format(result))
     else:
         return render_template('index.html')
 
