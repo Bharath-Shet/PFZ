@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Determine PFZ</title>
+    </head>
+    
+    <body>
+        <div>
+            <h1>Predict PFZ Analysis</h1>
+            
+            <form action ="/" method="post">
+                <br/>
+<!--                 <center> -->
+                    <div>
+                        <label>Longitude :</label>
+                        <input type="text" name="LON" placeholder="Longitude" required="required"/><br/><br/>
+                    </div>
+                
+                  <div>
+                        <label>Latitude :</label>
+                     <input type="text" name="LAT" placeholder="latitude" required="required"/><br/><br/>
+                  </div>
+                
+                
+                    Temperature :<input type="text" name="SST" placeholder="temperature" required="required"/><br/><br/>
+                    Salinity :<input type="text" name="SSS" placeholder="salinity" required="required"/><br/><br/>
+                    Chlorophyll :<input type="text" name="SSC" placeholder="chlorophyll" required="required"/><br/><br/>
+<!--                 </center> -->
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            
+            <br/>
+            <br/>
+            
+            {{ prediction_text }}
+        </div>
+    </body>
+</html>
+          
