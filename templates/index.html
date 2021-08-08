@@ -4,7 +4,16 @@
         <meta charset="UTF-8">
         <title>Determine PFZ</title>
     </head>
-    
+    <script>
+    var slider = document.getElementById("SST");
+    var output = document.getElementById("sstop");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
     <body>
         <div>
             <h1>Predict PFZ Analysis</h1>
@@ -23,7 +32,8 @@
                   </div>
                 
                 
-                    Temperature :<input type="range" name="SST" placeholder="temperature" min="22" max="44" required="required"/><br/><br/>
+                    Temperature :<input type="range" name="SST" placeholder="temperature" min="22" max="44" id="SST" step="0.1" required="required"/><br/><br/>
+                    <p>Value: <span id="sstop"></span></p>
                     Salinity :<input type="range" name="SSS" placeholder="salinity" min="22" max="34" required="required"/><br/><br/>
                     Chlorophyll :<input type="range" name="SSC" placeholder="chlorophyll" min="0.5" max="3" required="required"/><br/><br/>
 <!--                 </center> -->
